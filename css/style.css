@@ -2,7 +2,7 @@ body {
     background-color: pink;
 }
 
-#generate {
+.button {
     width: 20%;
     background-color: grey;
     border-radius: 25%;

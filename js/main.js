@@ -1,8 +1,25 @@
-console.log("connected")
+console.log("connected");
+$('#reveal').hide();
 
 const generateJoke = function () {
-    console.log('I have been clicked')
-}
+  let question = "A ham sandwich walks into a bar and orders a beer";
 
-$('#generate').on('click', generateJoke)
+  $('#joke-container').append(question);
+  $('#generate').hide();
+  $('#reveal').show();
+};
+
+
+const revealAnswer = function () {
+    let answer = "the bartender says “sorry, we don’t serve food here.";
+  
+    
+    $('#joke-container').append(answer);
+    $('#reveal').hide();
+    $('#generate').show();
+  };
+
+
+$('#generate').on('click', generateJoke);
+$('#reveal').on('click', revealAnswer);
 
